@@ -4,7 +4,7 @@ MAINTAINER Abhinav Ajgaonkar <abhinav316@gmail.com>
 
 # Install Redis
 RUN	\
-	apt-get -y -qq install redis-server
+	apt-get -y -qq install python redis-server
 
 # Install Node
 RUN	\
@@ -20,4 +20,4 @@ RUN	\
 RUN \
 	cd /etc/redis && \
 	mv redis.conf redis.conf.default && \
-	ln -s /data/redis/redis.conf
+	ln -s /data/conf/redis.conf
