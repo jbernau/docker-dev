@@ -20,4 +20,7 @@ RUN	\
 RUN \
 	cd /etc/redis && \
 	mv redis.conf redis.conf.default && \
-	ln -s /data/conf/redis.conf
+	ln -s /src/conf/redis.conf
+
+# Set the working directory
+WORKDIR	/src
