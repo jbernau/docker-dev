@@ -16,11 +16,7 @@ RUN	\
 	ln -s /opt/node/bin/* . && \
 	rm -f /opt/node-v0.10.28-linux-x64.tar.gz
 
-# Link the redis config
-RUN \
-	cd /etc/redis && \
-	mv redis.conf redis.conf.default && \
-	ln -s /src/conf/redis.conf
-
 # Set the working directory
 WORKDIR	/src
+
+CMD ["/bin/bash"]

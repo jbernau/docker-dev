@@ -37,19 +37,4 @@ and run using:
 docker run -i -t --rm -p 3000:3000 -v `pwd`:/src \
   sqldump/my-docker-dev:0.1 /bin/bash
 ```
-  
-## Once the container is running
-  
-Once the container is running, it drops into a bash shell. To run the sample Node app, run:
-  
-```
-/src/docker-run.sh
-```
-  
-This script does a few things:
-  
-1) Cleans up and fixes the permissions on the `/src/redis` directory  
-2) Starts the `redis-server` service  
-3) NPM installs `nodemon` globally (to watch for file changes and restart the server)  
-4) NPM installs all the dependencies  
-5) Starts `server.js` under nodemon  
+
